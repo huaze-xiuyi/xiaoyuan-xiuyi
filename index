@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBTI 人格测试</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 水印容器 */
+        .watermark-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .watermark {
+            position: absolute;
+            font-weight: 900;
+            color: rgba(91, 33, 182, 0.05);
+            white-space: nowrap;
+            transform: rotate(-45deg);
+            font-size: 80px;
+            letter-spacing: 10px;
+            line-height: 1;
+        }
+
+        .watermark-1 {
+            top: 10%;
+            left: -10%;
+            width: 120%;
+            animation: watermarkFloat 8s ease-in-out infinite;
+        }
+
+        .watermark-2 {
+            top: 35%;
+            right: -10%;
+            width: 120%;
+            animation: watermarkFloat 10s ease-in-out infinite 1s;
+        }
+
+        .watermark-3 {
+            top: 60%;
+            left: -10%;
+            width: 120%;
+            animation: watermarkFloat 12s ease-in-out infinite 2s;
+        }
+
+        .watermark-4 {
+            bottom: 10%;
+            right: -10%;
+            width: 120%;
+            animation: watermarkFloat 9s ease-in-out infinite 1.5s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 水印背景层 -->
+    <div class="watermark-layer">
+        <div class="watermark watermark-1">小缘 · 小缘 · 小缘 · 小缘</div>
+        <div class="watermark watermark-2">小缘</div>
+        <div class="watermark watermark-3">小缘 · 小缘 · 小缘</div>
+        <div class="watermark watermark-4">小缘</div>
+    </div>
+
+    <div id="app"></div>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
